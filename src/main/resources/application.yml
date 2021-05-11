@@ -17,7 +17,7 @@ management:
         user-name: avi
         password: hellogithub
         step: 15s
-        uri: http://thor:8086
+        uri: http://monitoring:8086
         autoCreateDb: false
 
 
