@@ -33,7 +33,3 @@ management:
 
 server:
   port: 8090
-
-vault:
-  uri: http://thor:8200
-  token: s.21dLH6NC69VgmzPyXyLuVB8G
