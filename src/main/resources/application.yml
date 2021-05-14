@@ -1,9 +1,9 @@
 # MySQL
 spring:
   datasource:
-    url: jdbc:mysql://thor:3306/avizandum?serverTimezone=UTC&useLegacyDatetimeCode=false
-    username: avizandumapp
-    password: hellogithub
+    url: ${springDatasourceUrl}
+    username: ${springDatasourceUsername}
+    password: ${springDatasourcePassword}
   jpa:
     hibernate:
       use-new-id-generator-mappings: false
@@ -12,9 +12,9 @@ spring:
 
 #Keycloak
 keycloak:
-  auth-server-url: http://thor:8180/auth
-  realm: avizandum
-  resource: avizandum-identity
+  auth-server-url: ${keycloakAuthServerUrl}
+  realm: ${keycloakRealm}
+  resource: ${keycloakResource}
   public-client: true
   principal-attribute: preferred_username
 
@@ -25,10 +25,10 @@ management:
       influx:
         enabled: true
         db: avizandum
-        user-name: avi
-        password: hellogithub
+        user-name: ${influxUserName}
+        password: ${influxPassword}
         step: 15s
-        uri: http://monitoring:8086
+        uri: ${influxUri}
         autoCreateDb: false
 
 server:

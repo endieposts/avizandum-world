@@ -8,11 +8,11 @@ hibernate:
 spring:
   datasource:
     url: jdbc:h2:mem:avizandum;DB_CLOSE_DELAY=-1
-    username: avizandumapp
-    password: hellogithub
+    username: dummytestuser
+    password: hellogithub!
 
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration,org.springframework.boot.autoconfigure.security.SecurityFilterAutoConfiguration,org.springframework.boot.autoconfigure.security.FallbackWebSecurityAutoConfiguration,org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration
 
 tester2:
-  me3
+  dummyvariable
