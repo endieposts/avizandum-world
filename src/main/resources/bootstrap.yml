@@ -9,5 +9,5 @@ spring:
       authentication: TOKEN
       token: ${myvaulttoken}
       kv:
-        backend-version: 2
+        backend-version: 3
         enabled: true
