@@ -1,3 +1,14 @@
+# MySQL
+spring:
+  datasource:
+    url: jdbc:mysql://thor:3306/avizandum?serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: avizandumapp
+    password: hellogithub
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: false
+      ddl-auto: create
+    show-sql: true
 
 #Keycloak
 keycloak:
@@ -20,15 +31,9 @@ management:
         uri: http://monitoring:8086
         autoCreateDb: false
 
+server:
+  port: 8090
 
-# MySQL
-spring:
-  datasource:
-    url: jdbc:mysql://thor:3306/avizandum?serverTimezone=UTC&useLegacyDatetimeCode=false
-    username: avizandumapp
-    password: hellogithub
-  jpa:
-    hibernate:
-      use-new-id-generator-mappings: false
-      ddl-auto: create
-    show-sql: true
+vault:
+  uri: http://thor:8200
+  token: s.21dLH6NC69VgmzPyXyLuVB8G

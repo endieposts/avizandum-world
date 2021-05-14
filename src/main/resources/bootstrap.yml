@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: avizandum
+  cloud:
+    vault:
+      host: thor
+      port: 8200
+      scheme: http
+      authentication: TOKEN
+      token: ${my.vault.token}
+      kv:
+        backend-version: 2
+        enabled: true
