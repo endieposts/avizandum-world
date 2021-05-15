@@ -1,11 +1,4 @@
-FROM maven:3.5-jdk-8
-
-RUN mkdir -p /deploy/application
-
-VOLUME ["/deploy/application"]
-
-WORKDIR /deploy/application
-
-ADD . .
-
-ENTRYPOINT ["mvn","clean","package"]
+FROM openjdk:16
+VOLUME /tmp
+COPY target/*.jar avizandum-world.jar
+ENTRYPOINT ["java", "-jar", "/avizandum-world.jar"]
